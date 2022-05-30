@@ -1,2 +1,9 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= asset_path('banner-photo.jpg') %>)">
+  <div class="container">
+    <h1 class="text-center">Frippery</h1><p class="text-center"> where you can <strong>find and sell fancy dress costumes for special occasions </strong>!<p>
+
+
+<%= link_to "List a costume", "#", class: "btn btn-flat" %>
+<%= link_to "Rent a costume", "#", class: "btn btn-gradient" %>
+  </div>
+</div>
