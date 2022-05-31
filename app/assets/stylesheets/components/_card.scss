@@ -4,7 +4,9 @@
   grid-gap: 16px;
   height: 180px;
 }
-
+h6{
+  text-align: left;
+}
 // Smallest device
 @media (min-width: 100px) and (max-width: 575px) {
   .cards {
