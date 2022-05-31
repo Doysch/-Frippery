@@ -5,5 +5,5 @@ Rails.application.routes.draw do
   resources :costumes do
     resources :bookings, only: [:new, :create]
   end
-  resources :bookmarks, only: [:destroy]
+  # resources :bookings, only: [:destroy]
 end
