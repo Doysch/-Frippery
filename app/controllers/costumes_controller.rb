@@ -8,6 +8,10 @@ class CostumesController < ApplicationController
     @costume = Costume.new
   end
 
+  def show
+    @costume = Costume.find(params[:id])
+  end
+
   def create
     @costume = Costume.new(costume_params)
     if @costume.save
@@ -31,7 +35,7 @@ class CostumesController < ApplicationController
   # end
 
   def costume_params
-    params.require(:costume).permit(:size, :location, :genre, :price)
+    params.require(:costume).permit(:size, :location, :name, :price)
   end
 
 end
