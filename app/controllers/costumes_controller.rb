@@ -1,6 +1,6 @@
 class CostumesController < ApplicationController
 
-  def list
+  def index
     @costumes = Costume.all
   end
 
@@ -9,13 +9,12 @@ class CostumesController < ApplicationController
   end
 
   def create
-    @costume = Costume.new(params[:size, :location, :genre, :price])
-    @costume = Costume.new(list_params)
-      if @costume.save
-        redirect_to costume_path(@costume)
-        else
-          render :new, status: :unprocessable_entity
-      end
+    @costume = Costume.new(costume_params)
+      # if @costume.save
+      #   redirect_to costume_path(@costume)
+      #   else
+      #     render :new, status: :unprocessable_entity
+      # end
   end
 
   def edit
@@ -25,6 +24,13 @@ class CostumesController < ApplicationController
   def update
 
   end
+  private
+  def set_list
+    @costume = Costume.find(params[:id])
+  end
 
+  def costume_params
+    params.require(:costume).permit(:size, :location, :genre, :price)
+  end
 
 end
