@@ -1,1 +1,11 @@
 <h1>Show Page</h1>
+
+<div class= "container" >
+  <h1> <%= @costume.name %></h1>
+    <p><%= @costume.location %></p>
+    <p><%= @costume.genre %></p>
+    <p><%= @costume.price %></p>
+
+    <p><%= link_to "Edit this Costume", edit_costume_path %></p>
+    <p><%= link_to "Back to Home", costume_path %></p>
+</div>
