@@ -1,11 +1,22 @@
 <h1>Show Page</h1>
-
-<div class= "container" >
-  <h1> <%= @costume.name %></h1>
-    <p><%= @costume.location %></p>
-    <p><%= @costume.genre %></p>
-    <p><%= @costume.price %></p>
-
-    <p><%= link_to "Edit this Costume", edit_costume_path %></p>
-    <p><%= link_to "Back to Home", costume_path %></p>
+<div class="container">
+  <div class="card-product mb-5 ">
+    <img src="https://images.halloweencostumes.co.uk/products/43438/1-2/mens-crab-costume.jpg" />
+    <div class="card-product-infos ">
+      <h2><%= @costume.name %></h2>
+      <div>
+        <ul>
+          <li><%= @costume.location %> </li>
+          <li><%= @costume.price %> </li>
+          <li><%= @costume.size %> </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div>
+  </div>
+  <p><%= link_to "Edit this Costume", edit_costume_path %></p>
+</div>
+</div>
+<p><%= link_to "Back to Home", costumes_path %></p>
 </div>
