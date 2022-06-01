@@ -92,7 +92,7 @@ Costume.destroy_all
     location: "London",
     size: "Large",
     price: 6,
-    name: "Grep",
+    name: "Hippy",
     user_id: 1
   )
 
@@ -100,7 +100,7 @@ Costume.destroy_all
     location: "London",
     size: "Large",
     price: 6,
-    name: "Yarn Init",
+    name: "Couples",
     user_id: 1
   )
 
