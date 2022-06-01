@@ -1,8 +1,9 @@
-<h1>Booking</h1>
 
-
+<div class="container">
+<h1 class="text-center">Booking</h1>
  <%= simple_form_for [@costume, @booking] do |f| %>
   <%= f.input :start_date, as: :date, html5: true %>
   <%= f.input :end_date, as: :date, html5: true %>
   <%= f.submit%>
 <% end %>
+</div>
