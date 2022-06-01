@@ -1,7 +1,8 @@
 .card-product {
   overflow: hidden;
-  height: 400px;
-  max-width: 500px;
+  height: 445px;
+  max-width: 560px;
+  margin-left: 229px;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
@@ -21,6 +22,7 @@
 }
 
 .card-product p {
+
   font-size: 12px;
   line-height: 1.4;
   opacity: .7;
