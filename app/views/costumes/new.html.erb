@@ -1,16 +1,17 @@
-<h1>test</h1>
-
-<%= simple_form_for [@costume] do |f| %>
-  <%= f.error_notification %>
-  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
-  <div class="form-input">
-    <%= f.input :name, placeholder: "Add name of costume" %>
-    <%= f.input :location, placeholder: "Add location of item" %>
-    <%= f.input :price, placeholder: "Add price of item" %>
-    <%= f.input :size, collection: %w[Small Medium Large] %>
-    <%= f.input :photo, as: :file %>
-  </div>
-  <div class="form-actions">
-    <%= f.submit "Create a costume", class: "btn btn-primary" %>
-  </div>
-<% end %>
+<h1 class="text-center">List A Costume</h1>
+<div class="container">
+  <%= simple_form_for [@costume] do |f| %>
+    <%= f.error_notification %>
+    <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+    <div class="form-input">
+      <%= f.input :name, placeholder: "Add name of costume" %>
+      <%= f.input :location, placeholder: "Add location of item" %>
+      <%= f.input :price, placeholder: "Add price of item" %>
+      <%= f.input :size, collection: %w[Small Medium Large] %>
+      <%= f.input :photo, as: :file %>
+    </div>
+    <div class="form-actions">
+      <%= f.submit "Create a costume", class: "btn btn-primary" %>
+    </div>
+  <% end %>
+</div>
