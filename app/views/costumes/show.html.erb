@@ -11,7 +11,7 @@
           <li><%= @costume.price %> </li>
           <li><%= @costume.size %> </li>
         </ul>
-        <%= link_to "<button>Book this Costume</button>".html_safe, new_costume_booking_path(@costume) %>
+        <%= link_to "Book this Costume",  new_costume_booking_path(@costume), class: "btn btn-success" %>
       </div>
     </div>
   </div>
