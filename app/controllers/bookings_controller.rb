@@ -1,3 +1,5 @@
+require 'date'
+
 class BookingsController < ApplicationController
   def new
     @booking = Booking.new
@@ -9,7 +11,7 @@ class BookingsController < ApplicationController
     @costume = Costume.find(params[:costume_id])
     @booking.costume = @costume
     @booking.user = current_user
-    # @booking.total_price = total_price(@booking, @costume)
+    @booking.total_price = total_price(@booking, @costume)
     if @booking.save
       redirect_to booking_path(@booking)
     else
@@ -40,8 +42,10 @@ class BookingsController < ApplicationController
   end
 
   def total_price(booking, costume)
-    # days = booking.end_date - booking.start_date
-    # total_price = days * costume.price
+    start_date = Date.parse(booking.start_date)
+    end_date = Date.parse(booking.end_date)
+    days = end_date - start_date
+    total_price = days * costume.price
   end
 
 end
