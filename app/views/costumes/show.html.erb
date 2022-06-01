@@ -1,4 +1,5 @@
 <h1>Show Page</h1>
+
 <div class="container">
   <div class="card-product mb-5 ">
     <img src="https://images.halloweencostumes.co.uk/products/43438/1-2/mens-crab-costume.jpg" />
@@ -10,13 +11,15 @@
           <li><%= @costume.price %> </li>
           <li><%= @costume.size %> </li>
         </ul>
+        <%= link_to "<button>Book this Costume</button>".html_safe, new_costume_booking_path(@costume) %>
       </div>
     </div>
   </div>
-  <div>
-  </div>
-  <p><%= link_to "Edit this Costume", edit_costume_path %></p>
+</div>
+<ul>
+<li><%= link_to "<button>Edit this Costume</button>".html_safe, edit_costume_path %></li>
 </div>
 </div>
-<p><%= link_to "Back to Home", costumes_path %></p>
+<li><%= link_to "<button>Back to Home</button>".html_safe, costumes_path %></li>
+</ul>
 </div>
