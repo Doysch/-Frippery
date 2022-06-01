@@ -7,9 +7,9 @@
       <h2><%= @costume.name %></h2>
       <div>
         <ul>
-          <li><%= @costume.location %> </li>
-          <li><%= @costume.price %> </li>
-          <li><%= @costume.size %> </li>
+          <li>Location: <%= @costume.location %> </li>
+          <li> Price: £<%= @costume.price %> </li>
+          <li>Size: <%= @costume.size %> </li>
         </ul>
         <%= link_to "Book this Costume",  new_costume_booking_path(@costume), class: "btn btn-success" %>
       </div>
