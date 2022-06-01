@@ -5,5 +5,5 @@ Rails.application.routes.draw do
   resources :costumes do
     resources :bookings, only: %i[new create edit update]
   end
-  # resources :bookings, only: [:destroy]
+  resources :bookings, only: [:show, :destroy]
 end

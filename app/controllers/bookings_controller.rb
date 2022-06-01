@@ -1,16 +1,17 @@
 class BookingsController < ApplicationController
   def new
     @booking = Booking.new
+    @costume = Costume.find(params[:costume_id])
   end
 
   def create
     @booking = Booking.new(booking_params)
-    costume = Costume.find(params[:costume_id])
-    @booking.costume = costume
+    @costume = Costume.find(params[:costume_id])
+    @booking.costume = @costume
     @booking.user = current_user
-    @booking.total_price
+    # @booking.total_price = total_price(@booking, @costume)
     if @booking.save
-      redirect_to _path(@user)
+      redirect_to booking_path(@booking)
     else
       render :new, status: :unprocessable_entity
     end
@@ -18,6 +19,10 @@ class BookingsController < ApplicationController
 
   def edit
     @user = User.find(params[:user_id])
+    @booking = Booking.find(params[:id])
+  end
+
+  def show
     @booking = Booking.find(params[:id])
   end
 
@@ -34,10 +39,9 @@ class BookingsController < ApplicationController
     params.require(:booking).permit(:start_date, :end_date, :costume_id)
   end
 
-  def total_price
-    days = booking.end_date - booking.start_date
-    total_price = days * costume.price
-    @booking.total_price = total_price
+  def total_price(booking, costume)
+    # days = booking.end_date - booking.start_date
+    # total_price = days * costume.price
   end
 
 end
