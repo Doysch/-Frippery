@@ -1,10 +1,15 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-
-  <%= image_tag "frippery-logo.png", class: "logo", alt: "avatar-large"  %>
-  <div class="container-fluid">
-    <%= link_to "#", class: "navbar-brand" do %>
-      <%# <%= image_tag , class:  "banner-witch-img"  %>
-    <% end %>
+  <div id="myMenu">
+    <div class="myWrapper">
+      <nav>
+        <a href="/"><%= image_tag "frippery-logo.png", class: "logo", alt: "avatar-large"  %>
+        <div class="container-fluid">
+        <%= link_to "#", class: "navbar-brand" do %>
+        <%# <%= image_tag , class:  "banner-witch-img"  %>
+        <% end %>
+      </nav>
+    </div>
+  </div>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -20,7 +25,7 @@
             <%= link_to "Bookings", "/bookings/4", class: "nav-link" %>
           </li>
           <li class="nav-item dropdown">
-            <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+            <%= image_tag "avatar.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
               <%= link_to "Action", "#", class: "dropdown-item" %>
               <%= link_to "Another action", "#", class: "dropdown-item" %>
