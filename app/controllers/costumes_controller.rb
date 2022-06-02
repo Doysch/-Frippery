@@ -1,9 +1,9 @@
 class CostumesController < ApplicationController
 
-  def index
-    if params[:query].present?
-      @costumes = Costume.where("name ILIKE ?", "%#{params[:query]}%")
-    else
+def index
+  if params[:query].present?
+    @costumes = Costume.where("name ILIKE ?", "%#{params[:query]}%")
+  else
     @costumes = Costume.all
     @markers = @costumes.geocoded.map do |flat|
         {
@@ -13,39 +13,41 @@ class CostumesController < ApplicationController
       end
     end
   end
+end
 
-  def new
-    @costume = Costume.new
+def new
+  @costume = Costume.new
+end
+
+def show
+  @costume = Costume.find(params[:id])
+end
+
+def create
+  @costume = Costume.new(costume_params)
+  @costume.user = current_user
+  if @costume.save
+    redirect_to costumes_path(@costume)
+  else
+    render :new, status: :unprocessable_entity
   end
+end
 
-  def show
-    @costume = Costume.find(params[:id])
-  end
+def edit
+end
 
-  def create
-    @costume = Costume.new(costume_params)
-    @costume.user = current_user
-    if @costume.save
-      redirect_to costumes_path(@costume)
-    else
-      render :new, status: :unprocessable_entity
-    end
-  end
+def update
 
-  def edit
+end
 
-  end
+private
 
-  def update
 
-  end
+def set_list
+  @costumes = Costume.find(params[:id])
+end
 
-  private
-  def set_list
-    @costumes = Costume.find(params[:id])
-  end
-
-  def costume_params
-    params.require(:costume).permit(:size, :location, :price, :photo, :name)
-  end
+def costume_params
+  params.require(:costume).permit(:size, :location, :price, :photo, :name)
+end
 end
