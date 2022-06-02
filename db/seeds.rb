@@ -10,7 +10,8 @@ user2 = User.new(email: "rob@gmail.com", password: "123456", first_name: "Rob", 
 
 puts "creating costumes"
 costume1 = Costume.new(
-  location: "London",
+  location: "Hackney",
+  address: "258C Richmond Rd, London",
   size: "Medium",
   price: 16,
   name: "Wonder Woman",
@@ -21,7 +22,8 @@ costume1.photo.attach(io: file, filename: "wonder-woman.png", content_type: "ima
 costume1.save!
 
 costume2 = Costume.new(
-  location: "Preston",
+  location: "Dalston",
+  address: "19 Buckingham Rd, London",
   size: "Large",
   price: 20,
   name: "Spiderman",
@@ -32,7 +34,8 @@ costume2.photo.attach(io: file, filename: "spiderman.jpg", content_type: "image/
 costume2.save!
 
 costume3 = Costume.create!(
-  location: "Norwich",
+  location: "Bermondsey",
+  address: "4 Neckinger, London",
   size: "Medium",
   price: 12,
   name: "Chilli",
@@ -44,7 +47,8 @@ costume3.photo.attach(io: file, filename: "chilli.jpg", content_type: "image/jpg
 costume3.save!
 
 costume4 = Costume.create!(
-  location: "Bath",
+  location: "Lambeth",
+  address: "140 Lambeth Walk, London",
   size: "Large",
   price: 6,
   name: "He Man",
@@ -56,7 +60,8 @@ costume4.photo.attach(io: file, filename: "he-man.jpg", content_type: "image/jpg
 costume4.save!
 
 costume5 = Costume.create!(
-  location: "Slough",
+  location: "Camberwell",
+  address: "4a Grove Ln, London",
   size: "Large",
   price: 99,
   name: "Pimp",
@@ -68,7 +73,8 @@ costume5.photo.attach(io: file, filename: "pimp.jpg", content_type: "image/jpg")
 costume5.save!
 
 costume6 = Costume.create!(
-  location: "Hoxton",
+  location: "Camden",
+  address: "53 Arlington Rd, London",
   size: "Small",
   price: 35,
   name: "Frog",
@@ -80,7 +86,8 @@ costume6.photo.attach(io: file, filename: "frog.jpg", content_type: "image/png")
 costume6.save!
 
 costume7 = Costume.create!(
-  location: "Clapham",
+  location: "Notting Hill",
+  address: "158 Lancaster Rd, London",
   size: "Large",
   price: 22,
   name: "Lobster",
@@ -92,7 +99,8 @@ costume7.photo.attach(io: file, filename: "lobster.jpg", content_type: "image/jp
 costume7.save!
 
 costume8 = Costume.create!(
-  location: "Brent Cross",
+  location: "Upper Clapton",
+  address: "30 Gilda Cres, London",
   size: "Large",
   price: 69,
   name: "Peter Griffin",
@@ -104,7 +112,8 @@ costume8.photo.attach(io: file, filename: "peter-griffin.jpg", content_type: "im
 costume8.save!
 
 costume9 = Costume.create!(
-  location: "Covent Garden",
+  location: "East Ham",
+  address: "73A Wakefield St, London",
   size: "Medium",
   price: 6,
   name: "Snow White",
