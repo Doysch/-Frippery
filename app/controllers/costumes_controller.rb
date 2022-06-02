@@ -6,10 +6,11 @@ class CostumesController < ApplicationController
     else
     @costumes = Costume.all
     @markers = @costumes.geocoded.map do |flat|
-      {
+        {
         lat: flat.latitude,
         lng: flat.longitude
-      }
+        }
+      end
     end
   end
 
