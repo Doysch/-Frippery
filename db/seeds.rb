@@ -12,6 +12,7 @@ Costume.destroy_all
   Costume.create!(
     location: "London",
     size: "Large",
+    address: "16 Villa Gaudelet, Paris",
     price: 6,
     name: "He-Man",
     user_id: 1
@@ -20,6 +21,7 @@ Costume.destroy_all
   Costume.create!(
     location: "London",
     size: "Large",
+    address: "16 Villa Gaudelet, Paris",
     price: 6,
     name: "She-Ra",
     user_id: 1
@@ -28,6 +30,7 @@ Costume.destroy_all
   Costume.create!(
     location: "London",
     size: "Large",
+    address: "16 Villa Gaudelet, Paris",
     price: 6,
     name: "Wonder Woman",
     user_id: 1
@@ -35,6 +38,7 @@ Costume.destroy_all
   Costume.create!(
     location: "London",
     size: "Large",
+    address: "16 Villa Gaudelet, Paris",
     price: 6,
     name: "Spiderman",
     user_id: 1
@@ -43,6 +47,7 @@ Costume.destroy_all
   Costume.create!(
     location: "London",
     size: "Large",
+    address: "16 Villa Gaudelet, Paris",
     price: 6,
     name: "Mankini",
     user_id: 1
@@ -51,6 +56,7 @@ Costume.destroy_all
   Costume.create!(
     location: "London",
     size: "Large",
+    address: "16 Villa Gaudelet, Paris",
     price: 6,
     name: "Pimp",
     user_id: 1
@@ -67,6 +73,7 @@ Costume.destroy_all
   Costume.create!(
     location: "London",
     size: "Large",
+    address: "16 Villa Gaudelet, Paris",
     price: 6,
     name: "Peter Griffin",
     user_id: 1
@@ -75,6 +82,7 @@ Costume.destroy_all
   Costume.create!(
     location: "London",
     size: "Large",
+    address: "16 Villa Gaudelet, Paris",
     price: 6,
     name: "Poisin Ivy",
     user_id: 1
@@ -83,6 +91,7 @@ Costume.destroy_all
   Costume.create!(
     location: "London",
     size: "Large",
+    address: "16 Villa Gaudelet, Paris",
     price: 6,
     name: "Turd",
     user_id: 1
@@ -91,6 +100,7 @@ Costume.destroy_all
   Costume.create!(
     location: "London",
     size: "Large",
+    address: "16 Villa Gaudelet, Paris",
     price: 6,
     name: "Hippy",
     user_id: 1
@@ -99,6 +109,7 @@ Costume.destroy_all
   Costume.create!(
     location: "London",
     size: "Large",
+    address: "16 Villa Gaudelet, Paris",
     price: 6,
     name: "Couples",
     user_id: 1
