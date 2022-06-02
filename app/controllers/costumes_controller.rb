@@ -1,7 +1,17 @@
 class CostumesController < ApplicationController
 
   def index
-    @costumes = Costume.all
+    if params[:query].present?
+      @costumes = Costume.where("name ILIKE ?", "%#{params[:query]}%")
+    else
+      @costumes = Costume.all
+      @markers = @costumes.geocoded.map do |flat|
+        {
+          lat: flat.latitude,
+          lng: flat.longitude
+        }
+      end
+    end
   end
 
   def new
@@ -10,6 +20,11 @@ class CostumesController < ApplicationController
 
   def show
     @costume = Costume.find(params[:id])
+    @markers = [
+      {
+        lat: @costume.latitude,
+        lng: @costume.longitude
+      }]
   end
 
   def create
@@ -23,20 +38,19 @@ class CostumesController < ApplicationController
   end
 
   def edit
-
   end
 
   def update
-
   end
 
   private
-  # def set_list
-  #   @costume = Costume.find(params[:id])
-  # end
+
+
+  def set_list
+    @costumes = Costume.find(params[:id])
+  end
 
   def costume_params
     params.require(:costume).permit(:size, :location, :price, :photo, :name)
   end
-
 end
