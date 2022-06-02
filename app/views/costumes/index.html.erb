@@ -5,7 +5,7 @@
       <div class="cards mb-3">
         <% @costumes.each do |costume| %>
           <%= link_to costume_path(costume), class:"text-decoration-none" do %>
-            <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://res.cloudinary.com/dystxnkgb/image/upload/v1654011385/viktor-forgacs-EyoU4GJjfU4-unsplash_1_rr4cag.jpg)">
+            <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path costume.photo.key %>')">
               <h2> <%= costume.name %> </h2>
               <%# <p class="fs-6"> <%= costume.location %>
               <%# <p class="fs-6"> <%= costume.price %>
