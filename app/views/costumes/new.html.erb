@@ -1,5 +1,5 @@
 <h1 class="text-center">List A Costume</h1>
-<div class="container">
+<div class="container col-6">
   <%= simple_form_for [@costume] do |f| %>
     <%= f.error_notification %>
     <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
@@ -12,6 +12,7 @@
     </div>
     <div class="form-actions">
       <%= f.submit "Create a costume", class: "btn btn-primary" %>
+      <%= link_to "Previous", root_path, class: "btn btn-outline-secondary" %>
     </div>
   <% end %>
 </div>

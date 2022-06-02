@@ -1,0 +1,39 @@
+.footer {
+  background: #0c000067;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100px;
+  padding: 0px 50px;
+  color: rgba(242, 241, 245, 0.986);
+  margin-top: 15px;
+}
+.footer-links {
+  display: flex;
+  align-items: center;
+}
+.footer-links a {
+  color: rgb(251, 244, 244);
+  opacity: 0.15;
+  text-decoration: none;
+  font-size: 24px;
+  padding: 0px 10px;
+}
+.footer-links a:hover {
+  opacity: 1;
+}
+.footer .fa-heart {
+  color: #D23333;
+}
+
+.footer-about {
+  align-items: center;
+  font-size: 16px;
+  color:rgb(251, 244, 244);
+}
+
+.page-container {
+  //min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
