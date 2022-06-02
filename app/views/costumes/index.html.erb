@@ -1,6 +1,13 @@
-<div class="container mb-5">
   <h1 class = "text-center">Flex your Frippery</h1>
+    <%= form_tag costumes_path, method: :get, class: "d-flex" do %>
+    <%= text_field_tag :query,
+    params[:query],
+    class: "form-control",
+    placeholder: "Find a costume"%>
+    <%= submit_tag "Search", class: "btn btn-primary" %>
+  <% end %>
 
+<div class="container mb-5">
       <div class="cards mb-3">
         <% @costumes.each do |costume| %>
           <%= link_to costume_path(costume), class:"text-decoration-none" do %>

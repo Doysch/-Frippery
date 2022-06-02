@@ -1,7 +1,11 @@
 class CostumesController < ApplicationController
 
   def index
-    @costumes = Costume.all
+    if params[:query].present?
+      @costumes = Costume.where("name ILIKE ?", "%#{params[:query]}%")
+    else
+      @costumes = Costume.all
+    end
   end
 
   def new
@@ -31,12 +35,11 @@ class CostumesController < ApplicationController
   end
 
   private
-  # def set_list
-  #   @costume = Costume.find(params[:id])
-  # end
+  def set_list
+    @costumes = Costume.find(params[:id])
+  end
 
   def costume_params
     params.require(:costume).permit(:size, :location, :price, :photo, :name)
   end
-
 end
