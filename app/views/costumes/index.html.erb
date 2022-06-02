@@ -5,14 +5,27 @@
       <div class="cards mb-3">
         <% @costumes.each do |costume| %>
           <%= link_to costume_path(costume), class:"text-decoration-none" do %>
-            <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path costume.photo.key %>')">
-              <h2> <%= costume.name %> </h2>
-              <%# <p class="fs-6"> <%= costume.location %>
-              <%# <p class="fs-6"> <%= costume.price %>
-              <%# <p class="fs-6"> <%= costume.size %>
+            <div class="card-trip pt-3">
+              <%= cl_image_tag costume.photo.key  %>
+              <div class="card-trip-infos">
+                <div class="w-100 ">
+                  <h2 class="mb-3"> <%= costume.name %> </h2>
+                  <div class="d-flex justify-content-between align-items-end">
+                    <div>
+                      <p class="mb-2"><i class="fa-solid fa-location-dot" style="font-size:17px;"></i> <%= costume.location %></p>
+                      <p><i class="fa-solid fa-shirt"></i> <%= costume.size %> </p>
+                    </div>
+                    <div>
+                      <p> <i class="fa-solid fa-sterling-sign me-1"></i><%= costume.price %>0 /day</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           <% end %>
         <% end %>
       </div>
     </div>
   </div>
+</div>
+<%# <%= cl_image_path costume.photo.key, crop: :fill  %>
