@@ -4,7 +4,12 @@ class CostumesController < ApplicationController
     if params[:query].present?
       @costumes = Costume.where("name ILIKE ?", "%#{params[:query]}%")
     else
-      @costumes = Costume.all
+    @costumes = Costume.all
+    @markers = @costumes.geocoded.map do |flat|
+      {
+        lat: flat.latitude,
+        lng: flat.longitude
+      }
     end
   end
 
