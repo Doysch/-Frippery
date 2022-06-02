@@ -2,6 +2,12 @@ class CostumesController < ApplicationController
 
   def index
     @costumes = Costume.all
+    @markers = @costumes.geocoded.map do |flat|
+      {
+        lat: flat.latitude,
+        lng: flat.longitude
+      }
+    end
   end
 
   def new

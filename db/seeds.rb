@@ -140,12 +140,6 @@ costume9.save!
 #     user_id: 1
 #   )
 
-#   Costume.create!(
-#     location: "London",
-#     size: "Large",
-#     price: 6,
-#     name: "Couples",
-#     user_id: 1
-#   )
+
 
 puts "seeded database!"
