@@ -1,6 +1,6 @@
 
 <div class="wrapper container col-4">
-  <h1 class="text-center">Book this costume!</h1>
+  <h1 class="text-center">Book <%=@costume.name %> costume</h1>
   <div class="container col-4">
     <%= simple_form_for [@costume, @booking] do |f| %>
       <%= f.input :start_date, as: :date, html5: true, input_html:{class: "mb-1"} %>
