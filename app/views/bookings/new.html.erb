@@ -1,9 +1,12 @@
 
-<div class="container col-4">
-<h1 class="text-center">Book this costume!</h1>
- <%= simple_form_for [@costume, @booking] do |f| %>
-  <%= f.input :start_date, as: :date, html5: true %>
-  <%= f.input :end_date, as: :date, html5: true %>
-  <%= f.submit%>
-  <% end %>
+<div class="wrapper container col-4">
+  <h1 class="text-center">Book this costume!</h1>
+  <div class="container col-4">
+    <%= simple_form_for [@costume, @booking] do |f| %>
+      <%= f.input :start_date, as: :date, html5: true, input_html:{class: "mb-1"} %>
+      <%= f.input :end_date, as: :date, html5: true, input_html:{class: "mb-3"} %>
+      <%=f.submit"Create Booking", class: "btn btn-outline-dark"%>
+
+    <% end %>
+  </div>
 </div>
