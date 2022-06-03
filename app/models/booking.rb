@@ -5,6 +5,7 @@ class Booking < ApplicationRecord
   def formatted_date(date)
     array = date.split('-')
     formatted = Date.new(array[0].to_i, array[1].to_i, array[2].to_i)
-    formatted.strftime("%m/%d/%Y")
+    # formatted.strftime("%m/%d/%Y")
+    formatted.strftime("%d/%m/%Y")
   end
 end
