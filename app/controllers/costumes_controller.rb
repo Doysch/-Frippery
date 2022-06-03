@@ -7,8 +7,8 @@ class CostumesController < ApplicationController
       @costumes = Costume.all
       @markers = @costumes.geocoded.map do |flat|
         {
-          lat: flat.latitude,
-          lng: flat.longitude
+        lat: flat.latitude,
+        lng: flat.longitude
         }
       end
     end
@@ -44,7 +44,6 @@ class CostumesController < ApplicationController
   end
 
   private
-
 
   def set_list
     @costumes = Costume.find(params[:id])

@@ -10,8 +10,11 @@
   margin: 0;
   color: white;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  font-size: 32px;
+  font-size: 80px;
   font-weight: bold;
+  text-align: left;
+  vertical-align: top;
+  opacity: .8;
 }
 
 .banner p {
@@ -19,6 +22,8 @@
   color: white;
   opacity: .85;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  text-align: left;
+  vertical-align: top;
 }
 
 // <------------Banner Buttons ----------->
@@ -42,11 +47,11 @@
   padding: 8px 24px;
   border-radius: 4px;
   background: #a40c28c7;
-  transition: background 0.3s ease;
+  transition: 0.3s ease;
 }
 
 .btn-flat:hover {
-  background: #a16c76c7;
+  background: #4df34dc7;
   color: white;
 }
 
@@ -63,4 +68,11 @@
 .btn-gradient:hover {
   background: linear-gradient(#147EFF, #0F67DA);
   color: white;
+}
+
+.banner-btns {
+  display: flex;
+  justify-content: space-evenly;
+  width: 600px;
+  margin: auto;
 }
