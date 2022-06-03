@@ -11,7 +11,7 @@ class CostumesController < ApplicationController
         lng: flat.longitude
         }
       end
-      @lasttwelve = @costumes.last(12)
+      # @lastnine = @costumes.last(9)
     end
   end
 
