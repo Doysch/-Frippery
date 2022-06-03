@@ -33,18 +33,7 @@ file = URI.open("https://m.media-amazon.com/images/I/51vThbKgVyL._AC_SX679_.jpg"
 costume2.photo.attach(io: file, filename: "spiderman.jpg", content_type: "image/jpg")
 costume2.save!
 
-costume3 = Costume.create!(
-  location: "Bermondsey",
-  address: "4 Neckinger, London",
-  size: "Medium",
-  price: 12,
-  name: "Chilli",
-  user: user1
-)
 
-file = URI.open("https://www.elliottsfancydress.co.uk/media/catalog/product/cache/1/image/650x/040ec09b1e35df139433887a97daa66f/c/h/chilli-pepper-costume.jpg")
-costume3.photo.attach(io: file, filename: "chilli.jpg", content_type: "image/jpg")
-costume3.save!
 
 costume4 = Costume.create!(
   location: "Lambeth",
@@ -110,6 +99,19 @@ costume8 = Costume.create!(
 file = URI.open("https://images-eu.ssl-images-amazon.com/images/I/31XpxoK4OoL._SR600%2C315_PIWhiteStrip%2CBottomLeft%2C0%2C35_SCLZZZZZZZ_FMpng_BG255%2C255%2C255.jpg")
 costume8.photo.attach(io: file, filename: "peter-griffin.jpg", content_type: "image/jpg")
 costume8.save!
+
+costume3 = Costume.create!(
+  location: "Bermondsey",
+  address: "4 Neckinger, London",
+  size: "Medium",
+  price: 12,
+  name: "Chilli",
+  user: user1
+)
+
+file = URI.open("https://www.elliottsfancydress.co.uk/media/catalog/product/cache/1/image/650x/040ec09b1e35df139433887a97daa66f/c/h/chilli-pepper-costume.jpg")
+costume3.photo.attach(io: file, filename: "chilli.jpg", content_type: "image/jpg")
+costume3.save!
 
 costume9 = Costume.create!(
   location: "East Ham",

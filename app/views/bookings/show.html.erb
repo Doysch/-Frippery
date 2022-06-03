@@ -5,7 +5,7 @@
   <div class="col-12 pb-5">
     <h5 class="mb-3">Details</h5>
     <h5> 💰 The total price is £<%= @booking.total_price %>0</h5>
-    <h5> 📅 From <%= @booking.start_date %> to <%= @booking.end_date %></h5>
+    <h5> 📅 From <%= @booking.formatted_date(@booking.start_date) %> to <%= @booking.formatted_date(@booking.end_date) %></h5>
     <div class="btn btn-outline-secondary mt-5 ms-5"> <%= link_to "Explore more costumes", costumes_path, :class => "btn" %></div>
   </div>
 </div>
