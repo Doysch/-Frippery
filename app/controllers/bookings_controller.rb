@@ -47,5 +47,4 @@ class BookingsController < ApplicationController
     days = end_date - start_date
     total_price = days * costume.price
   end
-
 end

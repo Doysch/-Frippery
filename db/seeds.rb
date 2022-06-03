@@ -25,7 +25,7 @@ costume2 = Costume.new(
   location: "Dalston",
   address: "19 Buckingham Rd, London",
   size: "Large",
-  price: 20,
+  price: 10,
   name: "Spiderman",
   user: user2
 )
@@ -63,7 +63,7 @@ costume5 = Costume.create!(
   location: "Camberwell",
   address: "4a Grove Ln, London",
   size: "Large",
-  price: 99,
+  price: 5,
   name: "Pimp",
   user: user1
 )
@@ -76,7 +76,7 @@ costume6 = Costume.create!(
   location: "Camden",
   address: "53 Arlington Rd, London",
   size: "Small",
-  price: 35,
+  price: 7,
   name: "Frog",
   user: user2
 )
@@ -89,7 +89,7 @@ costume7 = Costume.create!(
   location: "Notting Hill",
   address: "158 Lancaster Rd, London",
   size: "Large",
-  price: 22,
+  price: 11,
   name: "Lobster",
   user: user1
 )
@@ -102,7 +102,7 @@ costume8 = Costume.create!(
   location: "Upper Clapton",
   address: "30 Gilda Cres, London",
   size: "Large",
-  price: 69,
+  price: 4,
   name: "Peter Griffin",
   user: user2
 )
