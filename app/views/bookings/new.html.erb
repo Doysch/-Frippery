@@ -1,15 +1,16 @@
 
-
-<div class="wrapper container col-4">
-  <div class="container col-6">
-    <h3 class="text-center">Book <%=@costume.name %> costume</h3>
-    <%= simple_form_for [@costume, @booking] do |f| %>
-      <%= f.input :start_date, as: :date, html5: true, input_html:{class: "mb-1"}, input_html:{oninput:"myFunction();"}%>
-      <%= f.input :end_date, as: :date, html5: true, input_html:{class: "mb-3"}, input_html:{oninput:"myFunction();"} %>
-      <h5 class="mt-5 ms-5">Total Price: £<span id="totalPrice">0</span></h5>
-      <hr>
-      <%=f.submit"Create Booking", class: "btn btn-success mt-3 ms-5"%>
-    <% end %>
+<div class="container col-6">
+  <div class="wrapper container col-4">
+    <div class="container col-6">
+      <h3 class="text-center">Book <%=@costume.name %> costume</h3>
+      <%= simple_form_for [@costume, @booking] do |f| %>
+        <%= f.input :start_date, as: :date, html5: true, input_html:{class: "mb-1"}, input_html:{oninput:"myFunction();"}%>
+        <%= f.input :end_date, as: :date, html5: true, input_html:{class: "mb-3"}, input_html:{oninput:"myFunction();"} %>
+        <h5 class="mt-5 ms-5">Total Price: £<span id="totalPrice">0</span></h5>
+        <hr>
+        <%=f.submit"Create Booking", class: "btn btn-success mt-3 ms-5"%>
+      <% end %>
+    </div>
   </div>
 </div>
 
