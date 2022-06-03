@@ -5,6 +5,7 @@
     <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
     <div class="form-input">
       <%= f.input :name, placeholder: "Add name of costume" %>
+      <%= f.input :address, placeholder: "Your address goes here" %>
       <%= f.input :location, placeholder: "Add location of item" %>
       <%= f.input :price, placeholder: "Add price of item" %>
       <%= f.input :size, collection: %w[Small Medium Large] %>
