@@ -1,7 +1,7 @@
 
 <div class="container">
-      <h1 class = "text-center">Rent a costume!</h1>
-      <div class="col-5 align-item-center">
+      <h1 class = "text-center">Enter costume name!</h1>
+      <div class="col-5 align-item-center mb-2">
         <%= form_tag costumes_path, method: :get, class: "d-flex" do %>
     <%= text_field_tag :query,
     params[:query],
