@@ -1,4 +1,11 @@
-<h1 class="greeting">✔ Congratulations your <%= @booking.costume.name %> costume is on its way from <%= @booking.costume.location %>!</h1>
-<h1 class="greeting">The total price is £<%= @booking.total_price %>0!</h1>
-<h1>Booking start date: <%= @booking.start_date %></h1>
-<h1>Booking end date: <%= @booking.end_date %></h1>
+<div class="container col-4 p-5">
+  <h3 class="text-center mb-3">🎉 Congratulations! 🎉</h3>
+  <h3 class="text-center"> Your <%= @booking.costume.name %> costume is on its way from <%= @booking.costume.location %>!</h3>
+  <hr>
+  <div class="col-12 pb-5">
+    <h5 class="mb-3">Details</h5>
+    <h5> 💰 The total price is £<%= @booking.total_price %>0</h5>
+    <h5> 📅 From <%= @booking.start_date %> to <%= @booking.end_date %></h5>
+    <div class="btn btn-outline-secondary mt-5 ms-5"> <%= link_to "Explore more costumes", costumes_path, :class => "btn" %></div>
+  </div>
+</div>
