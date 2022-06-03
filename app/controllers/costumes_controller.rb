@@ -10,7 +10,6 @@ def index
         lat: flat.latitude,
         lng: flat.longitude
         }
-      end
     end
   end
 end
