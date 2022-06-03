@@ -1,12 +1,12 @@
 
 <div class="container">
-      <h1 class = "text-center">Enter costume name!</h1>
+      <h1 class = "text-center">Choose Your Costume!</h1>
       <div class="col-5 align-item-center mb-2">
         <%= form_tag costumes_path, method: :get, class: "d-flex" do %>
     <%= text_field_tag :query,
     params[:query],
     class: "form-control",
-    placeholder: "Find a costume"%>
+    placeholder: "Enter costume name..."%>
     <%= submit_tag "Search", class: "btn btn-primary" %>
   <% end %>
       </div>
