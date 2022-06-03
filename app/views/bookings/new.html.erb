@@ -22,7 +22,7 @@
         var startDay = date[2];
         var startYear = date[0];
         var startDate;
-        startDate = (`'${startDay}/${startMonth}/${startYear}'`);
+        startDate = (`'${startMonth}/${startDay}/${startYear}'`);
 
         //console.log(startDate);
         var end = document.getElementById("booking_end_date").value;
@@ -31,7 +31,7 @@
         var endDay = endDate[2];
         var endYear = endDate[0];
         var endDate;
-        endDate = (`'${endDay}/${endMonth}/${endYear}'`);
+        endDate = (`'${endMonth}/${endDay}/${endYear}'`);
         //console.log(startDate);
         //console.log(endDate);
         const date1 = new Date(`${startDate}`);
