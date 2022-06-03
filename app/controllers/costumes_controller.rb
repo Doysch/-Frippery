@@ -1,17 +1,22 @@
 class CostumesController < ApplicationController
 
   def index
+    @costumes = Costume.all
     if params[:query].present?
-      @costumes = Costume.where("name ILIKE ?", "%#{params[:query]}%")
+      @lasttwelve = Costume.where("name ILIKE ?", "%#{params[:query]}%")
+      @markers = [{
+          lat: @lasttwelve.first.latitude,
+          lng: @lasttwelve.first.longitude
+        }]
+
     else
-      @costumes = Costume.all
+      @lasttwelve = @costumes.reverse.first(9)
       @markers = @costumes.geocoded.map do |flat|
         {
-        lat: flat.latitude,
-        lng: flat.longitude
+          lat: flat.latitude,
+          lng: flat.longitude
         }
       end
-      @lasttwelve = @costumes.last(12)
     end
   end
 
