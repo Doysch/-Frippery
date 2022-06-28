@@ -17,7 +17,7 @@ costume1 = Costume.new(
   name: "Wonder Woman",
   user: user1
 )
-file = URI.open("https://cdn.shopify.com/s/files/1/0466/9292/5593/products/00060707p_1200x.png")
+file = URI.open("https://res.cloudinary.com/dpk3pz6zs/image/upload/v1656425653/00060707p_1200x_1_yj5vb4.webp")
 costume1.photo.attach(io: file, filename: "wonder-woman.png", content_type: "image/png")
 costume1.save!
 
@@ -29,7 +29,7 @@ costume2 = Costume.new(
   name: "Spiderman",
   user: user2
 )
-file = URI.open("https://m.media-amazon.com/images/I/51vThbKgVyL._AC_SX679_.jpg")
+file = URI.open("https://res.cloudinary.com/dpk3pz6zs/image/upload/v1656425733/siperman_g2jfth.jpg")
 costume2.photo.attach(io: file, filename: "spiderman.jpg", content_type: "image/jpg")
 costume2.save!
 
@@ -42,7 +42,7 @@ costume3 = Costume.create!(
   user: user1
 )
 
-file = URI.open("https://www.elliottsfancydress.co.uk/media/catalog/product/cache/1/image/650x/040ec09b1e35df139433887a97daa66f/c/h/chilli-pepper-costume.jpg")
+file = URI.open("https://res.cloudinary.com/dpk3pz6zs/image/upload/v1656425813/chilli-pepper-costume_brjee1.jpg")
 costume3.photo.attach(io: file, filename: "chilli.jpg", content_type: "image/jpg")
 costume3.save!
 
@@ -56,7 +56,7 @@ costume4 = Costume.create!(
   user: user2
 )
 
-file = URI.open("https://s3-eu-west-1.amazonaws.com/images.linnlive.com/51d83020f3ba02e508f5f28a931540c2/b7b1b1a3-1824-46f8-b3e1-c29326ca870e.jpg")
+file = URI.open("https://res.cloudinary.com/dpk3pz6zs/image/upload/v1656425878/b7b1b1a3-1824-46f8-b3e1-c29326ca870e_muy4dd.jpg")
 costume4.photo.attach(io: file, filename: "he-man.jpg", content_type: "image/jpg")
 costume4.save!
 
@@ -69,7 +69,7 @@ costume5 = Costume.create!(
   user: user1
 )
 
-file = URI.open("https://images.halloweencostumes.co.uk/products/1472/1-2/supa-mac-daddy-pimp-costume.jpg")
+file = URI.open("https://res.cloudinary.com/dpk3pz6zs/image/upload/v1656426027/supa-mac-daddy-pimp-costume_dr8vlc.jpg")
 costume5.photo.attach(io: file, filename: "pimp.jpg", content_type: "image/jpg")
 costume5.save!
 
@@ -82,7 +82,7 @@ costume6 = Costume.create!(
   user: user2
 )
 
-file = URI.open("https://cdn.shopify.com/s/files/1/0464/7062/7487/products/00013373p_600x.png")
+file = URI.open("https://res.cloudinary.com/dpk3pz6zs/image/upload/v1656426208/ef1649_c7cfff303e8b40348b1afc9263e6c2a4_txodcb.jpg")
 costume6.photo.attach(io: file, filename: "frog.jpg", content_type: "image/png")
 costume6.save!
 
@@ -95,7 +95,7 @@ costume7 = Costume.create!(
   user: user1
 )
 
-file = URI.open("https://images.halloweencostumes.co.uk/products/43438/1-1/mens-crab-costume.jpg")
+file = URI.open("https://res.cloudinary.com/dpk3pz6zs/image/upload/v1656428225/mens-crab-costume_oz6sh6.jpg")
 costume7.photo.attach(io: file, filename: "lobster.jpg", content_type: "image/jpg")
 costume7.save!
 
@@ -122,26 +122,8 @@ costume9 = Costume.create!(
   user: user1
 )
 
-file = URI.open("https://cdn.shopify.com/s/files/1/0023/6178/6426/products/fever-fairytale-costume_2000x.jpg")
+file = URI.open("https://res.cloudinary.com/dpk3pz6zs/image/upload/v1656428332/fever-fairytale-costume_2000x_copy_pyqiy2.jpg")
 costume9.photo.attach(io: file, filename: "snow-white.jpg", content_type: "image/jpg")
 costume9.save!
-
-#   Costume.create!(
-#     location: "London",
-#     size: "Large",
-#     price: 6,
-#     name: "Turd",
-#     user_id: 1
-#   )
-
-#   Costume.create!(
-#     location: "London",
-#     size: "Large",
-#     price: 6,
-#     name: "Hippy",
-#     user_id: 1
-#   )
-
-
 
 puts "seeded database!"
